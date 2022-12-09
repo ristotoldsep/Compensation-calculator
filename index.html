@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compensation Calculator 💸</title>
+</head>
+
+<body>
+  <main>
+    <section class="content">
+      <section class="main-content">
+        <header>
+          <h1>Quam Tristique Condimentum</h1>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis
+            natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus. <span class="highlight">Curabitur
+              blandit</span> tempus porttitor. Integer posuere
+            erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.
+          </p>
+        </header>
+      </section>
+      <section class="extra-content">
+        <section class="description">
+
+          <h2>Fringilla Euismod Adipiscing Ipsum</h2>
+
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus
+            mollis interdum.
+            Aenean lacinia bibendum nulla sed.</p>
+
+          <ul>
+            <li>Tellus Ullamcorper Inceptos</li>
+            <li>
+              Magna Condimentum
+              <ul>
+                <li>Mattis Tristique</li>
+                <li>Pharetra Pellentesque Dapibus</li>
+              </ul>
+            </li>
+            <li>Aenean Inceptos</li>
+            <li>Parturient Bibendum</li>
+          </ul>
+
+        </section>
+        <section class="images">
+          <img src="/assets/images/board.jpg" alt="Image of a board.">
+        </section>
+      </section>
+    </section>
+    <section class="calculator">
+      <section class="calculator-wrapper">
+        <h4>Compensation calculator</h4>
+
+        <form>
+          <label for="income">Average Income</label>
+          <input type="text" name="income" placeholder="€">
+
+          <label for="leave-days">Days on sick-leave</label>
+          <input type="number" placeholder="days">
+
+          <section class="tuberculosis">
+            <input type="checkbox" id="tuberculosis" name="tuberculosis" value="Bike">
+            <label for="tuberculosis"> I have tuberculosis</label>
+          </section>
+
+          <button>Calculate</button>
+        </form>
+
+        <section class="results">
+          <article class="employer-compensation">
+            <p>The employer compensates</p>
+            <p class="employer-compensates">4 days</p>
+            <p class="employer-compensates-sum">112,00€</p>
+            <p class="daily-allowance">Daily allowance</p>
+            <p class="daily-allowance-sum">28,00€</p>
+          </article>
+
+          <article class="employer-compensation">
+            <p>Health insurance compensates</p>
+            <p class="employer-compensates">0 days</p>
+            <p class="employer-compensates-sum">00,00€</p>
+            <p class="daily-allowance">Daily allowance</p>
+            <p class="daily-allowance-sum">28,00€</p>
+          </article>
+        </section>
+
+        <section class="total">
+          <p class="total-title">Compensation total for <span class="">7</span> days (net)</p>
+          <p class="total-sum">112,00€</p>
+        </section>
+
+      </section>
+    </section>
+
+  </main>
+  <script type="module" src="/assets/main.js"></script>
+</body>
+
+</html>
