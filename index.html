@@ -55,42 +55,43 @@
       <section class="calculator-wrapper">
         <h4>Compensation calculator</h4>
 
-        <form>
+        <section class="form">
           <label for="income">Average Income</label>
-          <input type="text" name="income" placeholder="€">
-
+          <input type="number" name="income" placeholder="€" id="income" class="income">
+          
           <label for="leave-days">Days on sick-leave</label>
-          <input type="number" placeholder="days">
-
+          <input type="number" placeholder="days" id="leave-days">
+          
           <section class="tuberculosis">
             <input type="checkbox" id="tuberculosis" name="tuberculosis" value="Bike">
             <label for="tuberculosis"> I have tuberculosis</label>
           </section>
-
-          <button>Calculate</button>
-        </form>
+          
+          <button id="submit">Calculate</button>  
+        </section>  
+          
 
         <section class="results">
           <article class="employer-compensation">
             <p>The employer compensates</p>
-            <p class="employer-compensates">4 days</p>
-            <p class="employer-compensates-sum">112,00€</p>
-            <p class="daily-allowance">Daily allowance</p>
-            <p class="daily-allowance-sum">28,00€</p>
-          </article>
-
-          <article class="employer-compensation">
-            <p>Health insurance compensates</p>
             <p class="employer-compensates">0 days</p>
             <p class="employer-compensates-sum">00,00€</p>
             <p class="daily-allowance">Daily allowance</p>
-            <p class="daily-allowance-sum">28,00€</p>
+            <p class="daily-allowance-sum-employer">00,00€</p>
+          </article>
+
+          <article class="insurance-compensation">
+            <p>Health insurance compensates</p>
+            <p class="insurance-compensates">0 days</p>
+            <p class="insurance-compensates-sum">00,00€</p>
+            <p class="daily-allowance">Daily allowance</p>
+            <p class="daily-allowance-sum-insurance">00,00€</p>
           </article>
         </section>
 
         <section class="total">
-          <p class="total-title">Compensation total for <span class="">7</span> days (net)</p>
-          <p class="total-sum">112,00€</p>
+          <p class="total-title">Compensation total for <span class="compensation-days">0</span> days (net)</p>
+          <p class="total-sum">00,00€</p>
         </section>
 
       </section>
