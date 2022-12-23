@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.47c0f423.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compensation Calculator 💸</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script type="module" crossorigin src="/assets/index.2e43fbd1.js"></script>
+  <link rel="stylesheet" href="/assets/index.9eb8a605.css">
+</head>
+
+<body>
+  <!-- Preloader - inline styles for faster load -->
+  <section id="preloader" style="
+      display: flex;
+      background: #000;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.2s linear;
+      z-index: 9999;
+      opacity: 1;
+      transform: opacity 1s linear;">
+    <img src="/assets/loading.77e8ea30.gif" alt="spinner">
+  </section>
+
+  <main>
+    <!-- Content section -->
+    <section class="content">
+
+      <section class="main-content">
+        <header>
+          <h1>Quam Tristique Condimentum</h1>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis
+            natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus. <span class="highlight">Curabitur
+              blandit</span> tempus porttitor. Integer posuere
+            erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.
+          </p>
+        </header>
+      </section>
+
+      <section class="extra-content">
+
+        <section class="description">
+
+          <h2>Fringilla Euismod <br>Adipiscing Ipsum</h2>
+
+          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus
+            mollis interdum.
+            Aenean lacinia bibendum nulla sed.</p>
+
+          <ul>
+            <li>Tellus Ullamcorper Inceptos</li>
+            <li>
+              Magna Condimentum
+              <ul>
+                <li>Mattis Tristique</li>
+                <li>Pharetra Pellentesque Dapibus</li>
+              </ul>
+            </li>
+            <li>Aenean Inceptos</li>
+            <li>Parturient Bibendum</li>
+          </ul>
+
+        </section>
+
+        <section class="images">
+          
+          <img src="/assets/board.0047d916.jpg" alt="Image of a board.">
+
+        </section>
+
+      </section>
+    </section>
+
+    <!-- Calculator section -->
+    <section class="calculator">
+      <section class="calculator-wrapper">
+        <h4>Compensation<br> Calculator</h4>
+
+        <section class="form">
+
+          <section class="income-container">
+            <label for="income" data-domain="domain.com">Average Income</label>
+            <input type="number" name="income" placeholder="0" id="income" class="income input-field">
+            <span class="inner-input">€</span>
+          </section>
+            
+          <section class="leave-days-container">
+            <label for="leave-days">Days on sick-leave</label>
+            <input type="number" placeholder="0" id="leave-days" class="leave-days  input-field">
+            <span class="inner-input">days</span>
+          </section>
+        
+          <section class="tuberculosis">
+            <label class="tuberculosis_checkbox" title="The maximum duration of one insurance event is 182 days, unless it’s tuberculosis. For
+tuberculosis it is up to 240 days.">I have tuberculosis
+              <input type="checkbox" id="tuberculosis">
+              <span class="checkmark"></span>
+            </label>
+          </section>
+          
+          <button id="submit">Calculate</button>  
+        </section>  
+          
+        <section class="results">
+          <article class="employer-compensation">
+            <p class="title">The employer <br>compensates</p>
+            <p class="employer-compensates compensation-days">0 days</p>
+            <p class="employer-compensates-sum compensation-sum">00,00€</p>
+            <p class="daily-allowance">Daily allowance</p>
+            <p class="daily-allowance daily-allowance-sum-employer">00,00€</p>
+          </article>
+
+          <article class="insurance-compensation">
+            <p class="title">Health Insurance <br>compensates</p>
+            <p class="insurance-compensates compensation-days">0 days</p>
+            <p class="insurance-compensates-sum compensation-sum">00,00€</p>
+            <p class="daily-allowance">Daily allowance</p>
+            <p class="daily-allowance daily-allowance-sum-insurance">00,00€</p>
+          </article>
+        </section>
+
+        <section class="total">
+          <p class="total-title">Compensation total for <span class="total-compensation-days">0</span> days (net)</p>
+          <p class="total-sum">00,00€</p>
+        </section>
+
+      </section>
+    </section>
+
+  </main>
+
+  <!-- The Modal for alerts -->
+  <section id="myModal" class="modal">
+  
+    <!-- Modal content -->
+    <section class="modal-content animate-fadein">
+      <span class="close">&times;</span>
+      <p id="modal-text"></p>
+    </section>
+  
+  </section>
+  <!-- Main JS script -->
+  
+</body>
+
+</html>
