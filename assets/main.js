@@ -7,8 +7,23 @@ const income = document.querySelector("#income");
 const leaveDays = document.querySelector("#leave-days");
 const tuberculosisCheck = document.querySelector("#tuberculosis");
 const button = document.querySelector("#submit");
-const totalCompensationDays = document.querySelector(".compensation-days");
+const totalCompensationDays = document.querySelector(".total-compensation-days");
 const totalCompensationSum = document.querySelector(".total-sum");
+
+// PRELOADER
+const preloader = document.querySelector("#preloader");
+
+const fadeOutEffect = setInterval(() => {
+  if (!preloader.style.opacity) {
+    preloader.style.opacity = 1;
+  }
+  if (preloader.style.opacity > 0) {
+    preloader.style.opacity -= 0.3;
+  } else {
+    clearInterval(fadeOutEffect);
+    preloader.classList.add("hide-preloader");
+  }
+}, 200);
 
 // Calculate function - fires on button click
 const calculate = () => {

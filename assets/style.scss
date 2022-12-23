@@ -4,6 +4,12 @@ $white: #fff;
 /* Metal Dark color */
 $dark: #111317;
 
+/* Metal Light color */
+$light: #E9EDF4;
+
+/* Metal Middle color */
+$middle: #7A818E;
+
 /* Red color*/
 $red: #E1261C;
 
@@ -31,15 +37,25 @@ body {
     overflow-x: hidden;
 }
 
+.show-preloader {
+    display: block;
+}
+
+.hide-preloader {
+    display: none !important;
+}
+
 main {
-    display: flex;
     padding: 100px;
+    display: grid;
+    grid-template-columns: 70% 30%;
 }
 
 .content {
     color: $white;
     line-height: 3rem;
-    flex: 1;
+   padding-right: 100px;
+    flex-wrap: wrap;
 
     .highlight {
         color: $red;
@@ -51,58 +67,367 @@ main {
         line-height: 5rem;
         margin: 0;
     }
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.extra-content {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin-top: 40px;
+    // gap: 20px;
+
+    .description {
+        padding-right: 40px;
+
+        ul {
+            /* remove default bullet points */
+            list-style-type: none;
+            padding-inline-start: 30px;
+
+            li {
+                position: relative;
+        
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -25px;
+                        top: 12px;
+                        width: 16px;
+                        height: 4px;
+                        background: url(./images/bullet.svg);
+                    }
+        
+                    ul li::before {
+                        content: '';
+                        position: absolute;
+                        left: -25px;
+                        top: 12px;
+                        width: 12px;
+                        height: 4px;
+                        background: url(./images/bullet2.svg);
+                    }
+            }
+        }
+     
+    }
+
+    .images {
+
+
+
+        img {
+            border-radius: 4px;
+            width: 100%;
+        }
+    }
 }
 
 .calculator {
-    flex: 1;
-    padding: 100px;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculator-wrapper {
-    width: 320px;
-    height: 100%;
     background: $white;
     border-radius: 15px;
+    clip-path: polygon(50% 0%, 95% 0, 100% 2%, 100% 98%, 95% 100%, 5% 100%, 0 98%, 0 2%, 5% 0);
     padding: 80px 20px;
     box-sizing: border-box;
 
     h4 {
         font-size: 2.4rem;
         line-height: 2.5rem;
+        margin: 0;;
     }
 }
 
-.extra-content {
+.form {
+    padding: 20px 0;
     display: flex;
-}
+    flex-direction: column;
+    // gap: 10px;
 
-.images img {
-    border-radius: 4px;
-}
+    label {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $dark;
+            padding: 5px 0px;
+    }
 
-.description {
-    padding-right: 40px;
-}
+    .income-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
 
-.results {
-    display: flex;
-}
-
-
-input[type="number"] {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background: #FFFFFF;
+        .input-field {
+            flex: 1;
+            padding: 10px 25px 10px 10px;
+            background: #FFFFFF;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 4px;
+            background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, #D3DAE8, #A7B7D8) border-box;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            box-sizing: border-box;
+            position: relative;
+            font-size: 18px;
+            font-weight: 400;
+            color: $dark;
+        }
+    
+        .inner-input {
+            position: absolute;
+            right: 10px;
+            top: 42px;
+            font-weight: 700;
+        }
     }
 
-#submit {
-    padding: 20px 40px;
-    background: linear-gradient(90deg, #911812 0%, #E1261C 100%);
-    border-radius: 30px;
-    color: $white;
+    .leave-days-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .input-field {
+            flex: 1;
+            padding: 10px 54px 10px 10px;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            background: linear-gradient(white, white) padding-box,
+                linear-gradient(to right, #D3DAE8, #A7B7D8) border-box;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            box-sizing: border-box;
+            position: relative;
+            font-size: 18px;
+            font-weight: 400;
+            color: $dark;
+        }
+    
+        .inner-input {
+            position: absolute;
+            right: 10px;
+            top: 42px;
+            font-weight: 700;
+        }
+    }
+
+        .income {
+            margin-bottom: 15px;
+        }
+
+        .tuberculosis {
+            margin: 20px 0;
+            
+            .tuberculosis_checkbox {
+                
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 20px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            
+            }
+            
+            /* Hide the browser's default checkbox */
+            .tuberculosis_checkbox input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+        
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 3px;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                background: linear-gradient(white, white) padding-box,
+                            linear-gradient(to right, #D3DAE8, #A7B7D8) border-box;
+                border-radius: 4px;
+                border: 2px solid transparent;
+            }
+        
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+        
+            /* Show the checkmark when checked */
+            .tuberculosis_checkbox input:checked~.checkmark:after {
+                display: block;
+            }
+        
+            /* Style the checkmark/indicator */
+            .tuberculosis_checkbox .checkmark:after {
+                left: 8px;
+                top: 0px;
+                width: 5px;
+                height: 12px;
+                border: solid $dark;
+                border-width: 0 4px 4px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }   
+        }
+    
+        #submit {
+            padding: 20px 40px;
+            background: linear-gradient(90deg, #911812 0%, #E1261C 100%);
+            border-radius: 30px;
+            color: $white;
+            width: 169px;
+            font-family: $font;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 20px;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+
+            &:hover::after {
+                content: '';
+                display: block;
+                width: 75px;
+                height: 175%;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
+                opacity: 0.5;
+                position: absolute;
+                top: -20px;
+                left: 0;
+                animation: shine 400ms linear;
+                transform: translateX(320px) rotate(-25deg);
+            }
+        
+            @keyframes shine {
+                0% {
+                    transform: translateX(-30px) rotate(-25deg);
+                }
+        
+                100% {
+                    transform: translateX(320px) rotate(-25deg);
+                }
+            }
+        }
+
+        
+}
+
+// Results section
+.results {
+    display: flex;
+    border-top: 2px solid $light;
+    border-bottom: 2px solid $light;
+    margin: 0 -20px;
+    padding: 20px 20px;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+
+    .employer-compensation {
+        flex: 1;
+    }
+    
+    .insurance-compensation {
+        flex: 1;
+    }
+
+    .title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+    .compensation-days {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .compensation-sum {
+        padding-top: 10px;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .daily-allowance {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: $middle;
+    }
+}
+
+// Total section
+.total {
+    text-align: center;
+    color: $dark;
+
+    p {
+        margin: 0;
+    }
+
+    .total-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+        padding-top: 20px;
+    }
+
+    .total-sum {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        padding-top: 5px;
+    }
+}
+
+
+
+// Responsive queries
+@media (max-width: 768px) {
+        main {
+            grid-template-columns: 100%;
+            padding: 10vw;
+        }
+
+        .content {
+          padding: 0;
+        }
+    
+        .calculator {
+      
+        }
+
+        .extra-content {
+            grid-template-columns: 100%;
+
+            .images {
+                padding: 40px 0;
+            }
+        }
 }
