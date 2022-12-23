@@ -20,7 +20,7 @@ $font: 'Sora', sans-serif;
 $bg: linear-gradient(90deg, #2B303A 0%, #3F4756 100%);
 
 html {
-    font-size: 62.5%; /* =10px (to calculate REM units easier */
+    font-size: 62.5%; /* = 10px (to calculate REM units easier */
     margin: 0;
     padding: 0;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 main {
-    padding: 100px;
+    padding: 10rem;
     display: grid;
     grid-template-columns: 70% 30%;
 }
@@ -54,7 +54,7 @@ main {
 .content {
     color: $white;
     line-height: 3rem;
-   padding-right: 100px;
+    padding-right: 10rem;
     flex-wrap: wrap;
 
     .highlight {
@@ -76,37 +76,37 @@ main {
 .extra-content {
     display: grid;
     grid-template-columns: 65% 35%;
-    margin-top: 40px;
-    // gap: 20px;
+    margin-top: 4rem;
 
     .description {
-        padding-right: 40px;
+        padding-right: 4rem;
 
         ul {
             /* remove default bullet points */
             list-style-type: none;
-            padding-inline-start: 30px;
+            padding-inline-start: 3rem;
 
             li {
                 position: relative;
+                margin-top: 1rem;
         
                     &::before {
                         content: '';
                         position: absolute;
-                        left: -25px;
-                        top: 12px;
-                        width: 16px;
-                        height: 4px;
+                        left: -2.5rem;
+                        top: 1.2rem;
+                        width: 1.6rem;
+                        height: .4rem;
                         background: url(./images/bullet.svg);
                     }
         
                     ul li::before {
                         content: '';
                         position: absolute;
-                        left: -25px;
-                        top: 12px;
-                        width: 12px;
-                        height: 4px;
+                        left: -2.5rem;
+                        top: 1.2rem;
+                        width: 1.2rem;
+                        height: .4rem;
                         background: url(./images/bullet2.svg);
                     }
             }
@@ -115,11 +115,8 @@ main {
     }
 
     .images {
-
-
-
         img {
-            border-radius: 4px;
+            border-radius: .4rem;
             width: 100%;
         }
     }
@@ -133,15 +130,15 @@ main {
 
 .calculator-wrapper {
     background: $white;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     clip-path: polygon(50% 0%, 95% 0, 100% 2%, 100% 98%, 95% 100%, 5% 100%, 0 98%, 0 2%, 5% 0);
-    padding: 80px 20px;
+    padding: 8rem 2rem;
     box-sizing: border-box;
 
     h4 {
         font-size: 2.4rem;
         line-height: 2.5rem;
-        margin: 0;;
+        margin: 0;
     }
 }
 
@@ -153,10 +150,10 @@ main {
 
     label {
             font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 1.4rem;
+            line-height: 2rem;
             color: $dark;
-            padding: 5px 0px;
+            padding: .5rem 0;
     }
 
     .income-container {
@@ -166,25 +163,25 @@ main {
 
         .input-field {
             flex: 1;
-            padding: 10px 25px 10px 10px;
+            padding: 1rem 2.5rem 1rem 1rem;
             background: #FFFFFF;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 4px;
+            box-shadow: 0rem .2rem .4rem rgba(0, 0, 0, 0.1);
+            border-radius: .4rem;
             background: linear-gradient(white, white) padding-box,
                 linear-gradient(to right, #D3DAE8, #A7B7D8) border-box;
-            border-radius: 4px;
+            border-radius: .4rem;
             border: 2px solid transparent;
             box-sizing: border-box;
             position: relative;
-            font-size: 18px;
+            font-size: 1.8rem;
             font-weight: 400;
             color: $dark;
         }
     
         .inner-input {
             position: absolute;
-            right: 10px;
-            top: 42px;
+            right: 1rem;
+            top: 4.2rem;
             font-weight: 700;
         }
     }
@@ -196,45 +193,45 @@ main {
 
         .input-field {
             flex: 1;
-            padding: 10px 54px 10px 10px;
+            padding: 1rem 5.4rem 1rem 1rem;
             background: #FFFFFF;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 4px;
+            box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.1);
+            border-radius: .4rem;
             background: linear-gradient(white, white) padding-box,
                 linear-gradient(to right, #D3DAE8, #A7B7D8) border-box;
-            border-radius: 4px;
+            border-radius: .4rem;
             border: 2px solid transparent;
             box-sizing: border-box;
             position: relative;
-            font-size: 18px;
+            font-size: 1.8rem;
             font-weight: 400;
             color: $dark;
         }
     
         .inner-input {
             position: absolute;
-            right: 10px;
-            top: 42px;
+            right: 1rem;
+            top: 4.2rem;
             font-weight: 700;
         }
     }
 
         .income {
-            margin-bottom: 15px;
+            margin-bottom: 1.5rem;
         }
 
         .tuberculosis {
-            margin: 20px 0;
+            margin: 2rem 0;
             
             .tuberculosis_checkbox {
                 
                 display: block;
                 position: relative;
-                padding-left: 35px;
+                padding-left: 3.5rem;
                 
                 cursor: pointer;
-                font-size: 14px;
-                line-height: 20px;
+                font-size: 1.4rem;
+                line-height: 2rem;
                 -webkit-user-select: none;
                 -moz-user-select: none;
                 -ms-user-select: none;
@@ -254,14 +251,14 @@ main {
             /* Create a custom checkbox */
             .checkmark {
                 position: absolute;
-                top: 3px;
+                top: .3rem;
                 left: 0;
-                height: 20px;
-                width: 20px;
-                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                height: 2rem;
+                width: 2rem;
+                box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.1);
                 background: linear-gradient(white, white) padding-box,
                             linear-gradient(to right, #D3DAE8, #A7B7D8) border-box;
-                border-radius: 4px;
+                border-radius: .4rem;
                 border: 2px solid transparent;
             }
         
@@ -279,12 +276,12 @@ main {
         
             /* Style the checkmark/indicator */
             .tuberculosis_checkbox .checkmark:after {
-                left: 8px;
-                top: 0px;
-                width: 5px;
-                height: 12px;
+                left: .8rem;
+                top: 0;
+                width: .5rem;
+                height: 1.2rem;
                 border: solid $dark;
-                border-width: 0 4px 4px 0;
+                border-width: 0 .4rem .4rem 0;
                 -webkit-transform: rotate(45deg);
                 -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
@@ -292,48 +289,56 @@ main {
         }
     
         #submit {
-            padding: 20px 40px;
+            padding: 2rem 4rem;
             background: linear-gradient(90deg, #911812 0%, #E1261C 100%);
-            border-radius: 30px;
+            border-radius: 3rem;
             color: $white;
-            width: 169px;
+            width: 16.9rem;
             font-family: $font;
             font-weight: 700;
-            font-size: 18px;
-            line-height: 20px;
-            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+            font-size: 1.8rem;
+            line-height: 2rem;
+            text-shadow: .2rem .2rem 0 rgba(0, 0, 0, 0.4);
             border: none;
             cursor: pointer;
             overflow: hidden;
             position: relative;
 
+            &:hover {
+                background-color: linear-gradient(90deg, #911812 0%, #E1261C 100%);
+                box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.15), inset 0 -.4rem 0 rgba(0, 0, 0, 0.25);
+            }
+
             &:hover::after {
                 content: '';
                 display: block;
-                width: 75px;
+                width: 7.5rem;
                 height: 175%;
                 background: rgb(255, 255, 255);
                 background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
                 opacity: 0.5;
                 position: absolute;
-                top: -20px;
+                top: -2rem;
                 left: 0;
                 animation: shine 400ms linear;
-                transform: translateX(320px) rotate(-25deg);
+                transform: translateX(32rem) rotate(-25deg);
+            }
+
+            &:active {
+                background: linear-gradient(90deg, #911812 0%, #E1261C 100%);
+                    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25), inset 0 .4rem 0 rgba(0, 0, 0, 0.25);
             }
         
             @keyframes shine {
                 0% {
-                    transform: translateX(-30px) rotate(-25deg);
+                    transform: translateX(-3rem) rotate(-25deg);
                 }
         
                 100% {
-                    transform: translateX(320px) rotate(-25deg);
+                    transform: translateX(32rem) rotate(-25deg);
                 }
             }
         }
-
-        
 }
 
 // Results section
@@ -341,8 +346,8 @@ main {
     display: flex;
     border-top: 2px solid $light;
     border-bottom: 2px solid $light;
-    margin: 0 -20px;
-    padding: 20px 20px;
+    margin: 0 -2rem;
+    padding: 2rem;
     text-align: center;
 
     p {
@@ -359,25 +364,25 @@ main {
 
     .title {
         font-weight: 400;
-        font-size: 14px;
-        line-height: 15px;
+        font-size: 1.4rem;
+        line-height: 1.5rem;
     }
 
     .compensation-days {
         font-weight: 700;
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 
     .compensation-sum {
-        padding-top: 10px;
+        padding-top: 1rem;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 
     .daily-allowance {
         font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
         color: $middle;
     }
 }
@@ -393,19 +398,84 @@ main {
 
     .total-title {
         font-weight: 400;
-        font-size: 14px;
-        line-height: 15px;
-        padding-top: 20px;
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+        padding-top: 2rem;
     }
 
     .total-sum {
         font-weight: 700;
-        font-size: 24px;
-        line-height: 30px;
-        padding-top: 5px;
+        font-size: 2.4rem;
+        line-height: 3rem;
+        padding-top: .5rem;
     }
 }
 
+/* MODAL */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: $dark;
+    /* Fallback color */
+    background-color: rgba($dark, 0.4);
+    /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+    width: 50%;
+    position: absolute;
+    border-radius: 3rem;
+    background-color: $white;
+    padding: 2rem;
+    border: 1px solid $middle;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* The Close Button */
+.close {
+    float: right;
+    font-size: 5rem;
+    font-weight: normal;
+    color: $red;
+    transition: all .5s ease;
+}
+
+.close:hover, .close:focus {
+    color: $dark;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fadein {
+    animation: fadein 1s ease-in-out;
+}
 
 
 // Responsive queries
@@ -418,16 +488,16 @@ main {
         .content {
           padding: 0;
         }
-    
+
         .calculator {
-      
+            display: block;
         }
 
         .extra-content {
             grid-template-columns: 100%;
 
             .images {
-                padding: 40px 0;
+                padding: 4rem 0;
             }
         }
 }

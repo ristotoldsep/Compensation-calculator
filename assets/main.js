@@ -9,6 +9,9 @@ const tuberculosisCheck = document.querySelector("#tuberculosis");
 const button = document.querySelector("#submit");
 const totalCompensationDays = document.querySelector(".total-compensation-days");
 const totalCompensationSum = document.querySelector(".total-sum");
+const modal = document.getElementById("myModal"); // Get the modal
+const modalText = document.getElementById("modal-text");
+const span = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
 
 // PRELOADER
 const preloader = document.querySelector("#preloader");
@@ -30,28 +33,26 @@ const calculate = () => {
     
   // Input check
   if (leaveDays.value < 0 || income.value < 0) {
-    alert("Enter a positive number.");
+    showModal("Enter a positive number.");
     return;
   }
   if (income.value == "" && leaveDays.value == "") {
-    alert("Please enter income and sick-leave days.");
+    showModal("Please enter income and sick-leave days.");
     return;
   }
   if (income.value == "") {
-    alert("Please enter average income.");
+    showModal("Please enter income and sick-leave days.");
     return;
   } else if (leaveDays.value == "") {
-    alert("Please enter days on sick-leave.");
+    showModal("Please enter days on sick-leave.");
     return;
   }
 
   // Check if user has tuberculosis - if they do, maxCompensationdays = 240, otherwise 182
   let maxCompensationDays = hasTuberculosis(tuberculosisCheck.checked);
-//   console.log(maxCompensationDays, "Max days");
 
   // Calculate daily allowance from last six months average income
   const dailyAllowance = calculateDailyAllowance(income.value);
-//   console.log(dailyAllowance, "Daily allowance");
 
   // Calculate compensation days
   const { employerCompensationDays, healthInsuranceCompensationdays } = getCompensationDays(leaveDays.value, maxCompensationDays);
@@ -88,10 +89,9 @@ const calculate = () => {
 // Fire calculate function on button click
 button.addEventListener("click", calculate);
 
-// Fire calculate function on Enter key press
+// Fire calculate function on "Enter" key press
 body.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-      // code for enter
       calculate();
     }
 });
@@ -125,8 +125,6 @@ const getCompensationDays = (leaveDays, maxCompensationDays) => {
   };
 }
 
-
-
 // Check if user has tuberculosis and return maximum compensation days 
 const hasTuberculosis = (check) => {
   let maxCompensationDays = 0;
@@ -149,4 +147,26 @@ const calculateDailyAllowance = (sum) => {
 
   return dailyAllowance;
 };
+
+/** Show modal for 2 seconds */
+const showModal = (text) => {
+    modal.style.display = "block";
+    modalText.innerHTML = "<p>" + text + "</p>";
+
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 2000);
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 

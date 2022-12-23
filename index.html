@@ -10,8 +10,9 @@
 </head>
 
 <body>
-  <!-- Preloader -->
-  <section id="preloader" style=" display: flex;
+  <!-- Preloader - inline styles for faster load -->
+  <section id="preloader" style="
+      display: flex;
       background: #000;
       height: 100vh;
       width: 100%;
@@ -28,7 +29,9 @@
   </section>
 
   <main>
+    <!-- Content section -->
     <section class="content">
+
       <section class="main-content">
         <header>
           <h1>Quam Tristique Condimentum</h1>
@@ -41,7 +44,9 @@
           </p>
         </header>
       </section>
+
       <section class="extra-content">
+
         <section class="description">
 
           <h2>Fringilla Euismod <br>Adipiscing Ipsum</h2>
@@ -64,9 +69,13 @@
           </ul>
 
         </section>
+
         <section class="images">
+          
           <img src="/assets/images/board.jpg" alt="Image of a board.">
+
         </section>
+
       </section>
     </section>
 
@@ -76,24 +85,22 @@
         <h4>Compensation<br> Calculator</h4>
 
         <section class="form">
-            <section class="income-container">
-              <label for="income" data-domain="domain.com">Average Income</label>
-              <input type="number" name="income" placeholder="0" id="income" class="income input-field">
-              <span class="inner-input">€</span>
-            </section>
+
+          <section class="income-container">
+            <label for="income" data-domain="domain.com">Average Income</label>
+            <input type="number" name="income" placeholder="0" id="income" class="income input-field">
+            <span class="inner-input">€</span>
+          </section>
             
-          
           <section class="leave-days-container">
             <label for="leave-days">Days on sick-leave</label>
             <input type="number" placeholder="0" id="leave-days" class="leave-days  input-field">
             <span class="inner-input">days</span>
           </section>
         
-          
-          
           <section class="tuberculosis">
-            
-            <label class="tuberculosis_checkbox">I have tuberculosis
+            <label class="tuberculosis_checkbox" title="The maximum duration of one insurance event is 182 days, unless it’s tuberculosis. For
+tuberculosis it is up to 240 days.">I have tuberculosis
               <input type="checkbox" id="tuberculosis">
               <span class="checkmark"></span>
             </label>
@@ -102,7 +109,6 @@
           <button id="submit">Calculate</button>  
         </section>  
           
-
         <section class="results">
           <article class="employer-compensation">
             <p class="title">The employer <br>compensates</p>
@@ -130,6 +136,17 @@
     </section>
 
   </main>
+
+  <!-- The Modal for alerts -->
+  <section id="myModal" class="modal">
+  
+    <!-- Modal content -->
+    <section class="modal-content animate-fadein">
+      <span class="close">&times;</span>
+      <p id="modal-text"></p>
+    </section>
+  
+  </section>
   <!-- Main JS script -->
   <script type="module" src="/assets/main.js"></script>
 </body>
