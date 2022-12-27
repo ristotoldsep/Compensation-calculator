@@ -1,5 +1,6 @@
 # Compensation-calculator
 Sick-leave health insurance compensation calculator.
+* Check live application: https://compensation-calculator.netlify.app
 
 ### Created with: 
 * HTML
