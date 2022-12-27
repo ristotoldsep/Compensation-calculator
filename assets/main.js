@@ -141,9 +141,11 @@ const hasTuberculosis = (check) => {
 const calculateDailyAllowance = (sum) => {
   const compensationRate = sum * 0.7; // 70% of the monthly income
 
-  const lastSixMonthsDays = 183; // 365 / 2, six months days to calculate the daily allowance
+  // const lastSixMonthsDays = 183; // 365 / 2, six months days to calculate the daily allowance
 
-  const dailyAllowance = compensationRate / lastSixMonthsDays;
+  const daysInMonth = 30;
+
+  const dailyAllowance = compensationRate / daysInMonth;
 
   return dailyAllowance;
 };
